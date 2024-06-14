@@ -48,6 +48,7 @@ public class Person3 {
 			return str;
 		}
 		
+		// 클래스 메소드
 		public static void showPerson() {
 			//System.out.println("이름:" + name); // 인스턴스 변수 사용 X
 		}

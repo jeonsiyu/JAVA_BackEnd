@@ -3,10 +3,13 @@ package java0611_2;
 public class Test1 {
 
 	public static void main(String[] args) {
+		// 객체 정의만으로는 출력X -> 객체를 생성한 다음 사용가능
 		// 클래스 person 객체 생성
 		// person 클래스에 person 생성자로 객체 생성
 		Person p = new Person();
-		p.name = "홍길동"; // -> 캡슐화 위배
+  //-> 클래스타입 참조변수 = 객체를 생성하는 동작 (new+생성자) 
+		// new person으로 만들어진 객체(덩어리)를 정확하게는 인스턴스라고 말함
+		// p.name = "홍길동"; // -> 캡슐화 위배
 		// 객체지향언어에서는 변수에 직접 접근하는 것을 별로 좋아하지 않음
 		// private으로 name이 설정되어 빨간 줄이 그어지는 것 -> 캡슐화 위배
 		p.setName("홍길동"); 
@@ -18,7 +21,7 @@ public class Test1 {
 		// person이 생성자가 됨 
 		// new 힙 메모리에 객채를 할당하는 느낌..
 		// 참조 변수가 없으므로 접근 할 수 없음 -> 인스턴스에 접근하려면 변수를 지정해주어야 함
-		new person(); // -> 인스턴스에 접근 x = 안에 속성에 접근 x
+		new Person(); // -> 인스턴스에 접근 x = 안에 속성에 접근 x
 			
 		// 객체끼리는 서로 다른 객체임 -> 같은 정보가 들어 갈순 있지만..
 		Person p2 = new Person();
@@ -42,7 +45,7 @@ public class Test1 {
 		Person3 p5 = new Person3();
 		Person3 p6 = new Person3();
 		System.out.println(p4.CITY); // 사용 가능하나 권장 x
-		System.out.println(Person3.CITY); // 클래스 변수 사용(권장)
+		System.out.println(Person3.CITY); // 클래스 변수 사용(권장) -> 클래스의 이름을 사용하여..
 		Person3.showPerson(); // 클래스 메소드 사용
 		p4.showPerson(); // 사용 가능 하나 권장 x
 		p5.showPerson();

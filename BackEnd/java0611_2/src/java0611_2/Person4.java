@@ -12,7 +12,7 @@ public class Person4 {
 		private String tel;
 		private String addr;
 		
-		// 기본생성자가 없더라고 자바 컴파일러가 자동으로 생성해줌-> 생성자 자체는 기본적으로 무조건 있어야함
+		// 기본생성자(매개변수가 없는 생성자)가 없더라고 자바 컴파일러가 자동으로 생성해줌-> 생성자 자체는 기본적으로 무조건 있어야함
 		// 만약 생성자를 적었으면 적은대로 따라함ㅇㅇ
 		// 객체(인스턴스)가 생성될 때 호출
 		public Person4(){
@@ -23,19 +23,13 @@ public class Person4 {
 			System.out.println();
 		 }
 		
-		public 	Person4( String name, String tel, String addr) {
+		public Person4(String name, String tel, String addr) {
 			this.name = name;
 			this.tel = tel;
 			this.addr = addr;
 			System.out.println("person4 생성자");
 		}
 		
-		public Person4(String name, String tel, String addr) {
-				this.name = name;
-				this.tel = tel;
-				this.addr = addr;
-					
-		}
 		
 		// 인스턴스 메소드, setter
 		// this: 객체(인스턴스) 자신의 정보
